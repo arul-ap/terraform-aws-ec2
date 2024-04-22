@@ -11,7 +11,7 @@ variable "env" {
   type = string
 }
 variable "ec2" {
- description = "EC2 instances"
+ description = "Map of EC2 instances"
  type = map(object({
    instance_type = string
    ami_id = string

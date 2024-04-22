@@ -17,7 +17,7 @@ resource "aws_instance" "ec2" {
     ami = var.ec2.ami_id
     instance_type = var.ec2.instance_type
     key_name = data.aws_key_pair.ec2.key_name
-    iam_instance_profile = var.ec2.instance_profile_name == null ? null : data.aws_iam_instance_profile.ec2.arn
+    iam_instance_profile = var.ec2.instance_profile_name == null ? null : data.aws_iam_instance_profile.ec2[0].arn
     root_block_device {
       encrypted = true
       kms_key_id = var.ec2.kms_key_id

@@ -24,5 +24,6 @@ variable "ec2" {
 }
 
 variable "name-prefix" {
+  description = "Name prefix"
   type = string
 }
