@@ -1,0 +1,1 @@
+Sample configuration to create multiple EC2 instances

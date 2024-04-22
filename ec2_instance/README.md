@@ -1,0 +1,1 @@
+Create one EC2 instance with EBS volumes and ENI and attached it to EC2.
