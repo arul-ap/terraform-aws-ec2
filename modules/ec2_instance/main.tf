@@ -37,7 +37,7 @@ resource "aws_instance" "ec2" {
 }
 
 module "ebs" {
-  source = "./ebs"
+  source = "./modules/ebs"
   for_each = var.ec2.ebs_vols
   az = var.ec2.az
   kms_key_id = var.ec2.kms_key_id
@@ -56,7 +56,7 @@ resource "aws_volume_attachment" "ec2" {
 
 
 module "eni" {
-  source = "./eni"
+  source = "./modules/eni"
   count = length(var.ec2.eni_subnet_id)
   subnet_id = var.ec2.eni_subnet_id[count.index]
   az = var.ec2.az

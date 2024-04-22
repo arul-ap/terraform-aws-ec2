@@ -6,7 +6,7 @@ data "aws_region" "current" {}
 
 module "ec2_instance" {
   for_each = var.ec2
-  source = "./ec2_instance"
+  source = "./modules/ec2_instance"
   ec2 = {
    ec2_name = each.key
    instance_type = each.value.instance_type
