@@ -23,11 +23,11 @@ variable "ec2" {
       size = number
       type = string
     })
-    ebs_vols = map(object({
+    ebs_vols = optional(map(object({
       dev_name = string
       size     = number
       type     = string
-    }))
+    })),{})
     eni_subnet_id       = list(string)
     eni_security_groups = optional(list(list(string)), [[]])
     ec2_tags            = map(string)
