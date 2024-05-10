@@ -27,7 +27,7 @@ variable "ec2" {
       dev_name = string
       size     = number
       type     = string
-    })),{})
+    })), {})
     eni_subnet_id       = list(string)
     eni_security_groups = optional(list(list(string)), [[]])
     ec2_tags            = map(string)
